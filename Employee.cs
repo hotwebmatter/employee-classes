@@ -22,5 +22,16 @@ namespace employee_classes
         public string Department { get; set; }
         public DateTime DateOfHire { get; set; }
         public double MonthlySalary { get; set; }
+        // return full name (First Last)
+        public string FullName()
+        {
+            return String.Format("{0} {1}", firstName, lastName);
+        }
+        // return full name (Last, First)
+        public string FullNameSortable()
+        {
+            return String.Format("{1}, {0}", firstName, lastName);
+        }
+
     }
 }
