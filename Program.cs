@@ -10,6 +10,7 @@ namespace employee_classes
             Employee anEmployee = new Employee();
             WriteLine(anEmployee.FullName());
             WriteLine(anEmployee.FullNameSortable());
+            WriteLine(anEmployee.ToString());
         }
     }
 }

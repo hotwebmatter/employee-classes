@@ -12,7 +12,7 @@ namespace employee_classes
                        lastName,
                        jobDescription,
                        department;
-        private DateTime dateOfHire;
+        private DateTime dateOfHire = new DateTime();
         private double monthlySalary;
         // auto-implemented property members
         public int EmployeeNumber { get; set; }
@@ -30,7 +30,7 @@ namespace employee_classes
             lastName = "Dent";
             jobDescription = "hitchhiker";
             department = "mostly harmless";
-            dateOfHire = new DateTime();
+            dateOfHire = DateTime.Today;
             monthlySalary = 0;
         }
         // return full name (First Last)
@@ -46,7 +46,16 @@ namespace employee_classes
         // override base.ToString() method
         public override string ToString()
         {
-            return base.ToString();
+            string result = String.Format("********** Employee Data Table **********\n");
+            result += String.Format("* {0, 18} {1, 18} *\n", "Employee ID:", employeeNumber);
+            result += String.Format("* {0, 18} {1, 18} *\n", "First Name:", firstName);
+            result += String.Format("* {0, 18} {1, 18} *\n", "Last Name:", lastName);
+            result += String.Format("* {0, 18} {1, 18} *\n", "Job Description:", jobDescription);
+            result += String.Format("* {0, 18} {1, 18} *\n", "Department:", department);
+            result += String.Format("* {0, 18} {1, 18:MM/dd/yyyy} *\n", "Date of Hire:", dateOfHire);
+            result += String.Format("* {0, 18} {1, 18:C} *\n", "Monthly Salary:", monthlySalary);
+            result += String.Format("*****************************************\n");
+            return result;
         }
     }
 }
