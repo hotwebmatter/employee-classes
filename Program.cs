@@ -7,7 +7,9 @@ namespace employee_classes
     {
         static void Main(string[] args)
         {
-            WriteLine("Hello World!");
+            Employee anEmployee = new Employee();
+            WriteLine(anEmployee.FullName());
+            WriteLine(anEmployee.FullNameSortable());
         }
     }
 }
