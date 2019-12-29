@@ -22,6 +22,17 @@ namespace employee_classes
         public string Department { get; set; }
         public DateTime DateOfHire { get; set; }
         public double MonthlySalary { get; set; }
+        // implement constructor
+        public Employee()
+        {
+            employeeNumber = 42;
+            firstName = "Arthur";
+            lastName = "Dent";
+            jobDescription = "hitchhiker";
+            department = "mostly harmless";
+            dateOfHire = new DateTime();
+            monthlySalary = 0;
+        }
         // return full name (First Last)
         public string FullName()
         {
