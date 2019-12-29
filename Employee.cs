@@ -43,6 +43,10 @@ namespace employee_classes
         {
             return String.Format("{1}, {0}", firstName, lastName);
         }
-
+        // override base.ToString() method
+        public override string ToString()
+        {
+            return base.ToString();
+        }
     }
 }
